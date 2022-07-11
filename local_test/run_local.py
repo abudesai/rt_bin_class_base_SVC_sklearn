@@ -45,7 +45,7 @@ from requirements.txt file, and then use that virtual env to do your testing.
 This isnt foolproof. You can still have host os, or python-version related issues, so beware.
 '''
 
-model_name = "binary_class_SVC"
+model_name = SVC.MODEL_NAME
 
 
 def create_ml_vol():    

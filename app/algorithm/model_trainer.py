@@ -23,9 +23,9 @@ model_cfg = get_model_config()
 def get_trained_model(data, data_schema, hyper_params):  
     
     # set random seeds
-    utils.set_seeds()
+    utils.set_seeds()    
     
-    # perform train/valid split 
+    # normally we do train, valid split, but we are not doing that here
     train_data = data
     # print('train_data shape:',  train_data.shape) 
     
@@ -46,8 +46,6 @@ def get_trained_model(data, data_schema, hyper_params):
 
 
 def train_model(train_X, train_y, hyper_params):    
-    # get model hyper-paameters parameters 
-    #data_based_params = get_data_based_model_params(train_X)
     model_params = {**hyper_params }
     
     # Create and train model   

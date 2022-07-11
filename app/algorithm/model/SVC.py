@@ -10,17 +10,7 @@ warnings.filterwarnings('ignore')
 from sklearn.svm import SVC
 
 model_fname = "model.save"
-MODEL_NAME = "SVC_sklearn"
-
-COST_THRESHOLD = float('inf')
-
-
-# class InfCostStopCallback(Callback):
-#     def on_epoch_end(self, epoch, logs={}):
-#         loss_val = logs.get('loss')
-#         if(loss_val == COST_THRESHOLD or tf.math.is_nan(loss_val)):
-#             print("Cost is inf, so stopping training!!")
-#             self.model.stop_training = True
+MODEL_NAME = "binary_class_SVC_sklearn"
 
 
 class SVC_sklearn(): 
