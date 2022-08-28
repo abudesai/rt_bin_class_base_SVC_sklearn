@@ -10,17 +10,16 @@ warnings.filterwarnings('ignore')
 from sklearn.svm import SVC
 
 model_fname = "model.save"
-MODEL_NAME = "binary_class_SVC_sklearn"
+MODEL_NAME = "bin_class_base_svc_sklearn"
 
 
-class SVC_sklearn(): 
+class Classifier(): 
     
-    def __init__(self, C = 1.0, degree = 3, tol = 1e-3, kernel = "rbf", **kwargs) -> None:
-        super(SVC_sklearn, self).__init__(**kwargs)
+    def __init__(self, C = 1.0, kernel = "rbf", degree = 3, tol = 1e-3, **kwargs) -> None:
         self.C = float(C)
+        self.kernel = kernel
         self.degree = int(degree)
         self.tol = float(tol)
-        self.kernel = kernel
         
         self.model = self.build_model()     
         
@@ -50,7 +49,7 @@ class SVC_sklearn():
 
     
     def save(self, model_path): 
-        joblib.dump(self.model, os.path.join(model_path, model_fname))
+        joblib.dump(self, os.path.join(model_path, model_fname))
         
 
 
