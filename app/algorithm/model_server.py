@@ -20,8 +20,6 @@ class ModelServer:
         self.id_field_name = self.data_schema["inputDatasets"][
             "binaryClassificationBaseMainInput"
         ]["idField"]
-        self.has_local_explanations = True
-        self.MAX_LOCAL_EXPLANATIONS = 5
 
     def _get_preprocessor(self):
         if self.preprocessor is None:
